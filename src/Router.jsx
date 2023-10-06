@@ -14,7 +14,7 @@ function Router() {
           <Route index element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="users">
-            <Route index element={<List />} />
+            <Route index element={<List isUser={true} />} />
             <Route path=":userId" element={<Single />} />
             <Route
               path="new"
@@ -22,7 +22,7 @@ function Router() {
             />
           </Route>
           <Route path="products">
-            <Route index element={<List />} />
+            <Route index element={<List isUser={false} />} />
             <Route path=":productId" element={<Single />} />
             <Route
               path="new"

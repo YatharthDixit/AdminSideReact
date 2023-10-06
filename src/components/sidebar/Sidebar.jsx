@@ -20,35 +20,35 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <div className="top">
-        <Link to="/" style={{ textDecoration: "none" }}>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <div className="top">
           <span className="logo">Yathadmin</span>
-        </Link>
-      </div>
+        </div>
+      </Link>
       <hr className="hr" />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li>
               {<SpaceDashboardOutlinedIcon className="icon" />}
               <span className="my-span">Dashboard</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
           <p className="title">LISTS</p>
 
-          <li>
-            <Link to="/users" style={{ textDecoration: "none" }}>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
               {<PersonOutlineOutlinedIcon className="icon" />}
               <span className="my-span">Users</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/products" style={{ textDecoration: "none" }}>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
               {<ShoppingCartOutlinedIcon className="icon" />}
               <span className="my-span">Products</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
           <li>
             {<CreditScoreOutlinedIcon className="icon" />}
             <span className="my-span">Orders</span>
