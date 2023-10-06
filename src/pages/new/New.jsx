@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./new.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import UploadFileIcon from "@mui/icons-material/UploadFile";
 import Navbar from "../../components/navbar/Navbar";
+import { DarkModeContext } from "../../context/darkModeContext";
 function New({ inputs, title }) {
+  const { darkMode } = useContext(DarkModeContext);
   const [file, setFile] = useState(null);
   return (
     <div className="new">
@@ -20,6 +22,8 @@ function New({ inputs, title }) {
               src={
                 file
                   ? URL.createObjectURL(file)
+                  : darkMode
+                  ? "https://cdn3.vectorstock.com/i/1000x1000/50/37/camera-icon-on-black-background-vector-15985037.jpg"
                   : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
               }
               alt=""
